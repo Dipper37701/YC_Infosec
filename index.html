@@ -3,52 +3,141 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>정유찬 - 자기소개</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>자기소개 - YC_Infosec</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f6f9;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        .profile {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+        .profile img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+        .profile h2 {
+            font-size: 26px;
+            color: #2c3e50;
+        }
+        .profile p {
+            font-size: 18px;
+            color: #7f8c8d;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .section h3 {
+            color: #2c3e50;
+            font-size: 22px;
+            border-bottom: 2px solid #2c3e50;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .section ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .section ul li {
+            font-size: 18px;
+            margin: 5px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+        .section ul li:before {
+            content: "•";
+            color: #2c3e50;
+            position: absolute;
+            left: 0;
+        }
+        .contact-info a {
+            color: #2980b9;
+            text-decoration: none;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #2c3e50;
+            color: white;
+            margin-top: 30px;
+        }
+    </style>
 </head>
-<body class="bg-gray-100 text-gray-900">
-    <div class="max-w-4xl mx-auto py-10">
-        <div class="bg-white p-8 rounded-2xl shadow-lg">
-            <h1 class="text-3xl font-bold text-center text-blue-600">정유찬</h1>
-            <p class="text-center text-gray-600 mt-2">고려대학교 세종캠퍼스 | 인공지능사이버보안학과 24학번</p>
-            
-            <div class="mt-6">
-                <h2 class="text-2xl font-semibold text-gray-800">취약점 제보 이력</h2>
-                <div id="reports" class="mt-4 space-y-4"></div>
+<body>
+    <header>
+        <h1>YC_Infosec 자기소개 페이지</h1>
+    </header>
+
+    <div class="container">
+        <!-- Profile Section -->
+        <div class="profile">
+            <div>
+                <h2>정유찬 (YuChan Jeong) / YC_Infosec</h2>
+                <p>고려대학교 세종캠퍼스 인공지능사이버보안학과 24학번</p>
             </div>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="section contact-info">
+            <h3>연락처</h3>
+            <ul>
+                <li>이름: 정유찬 (YuChan Jeong)</li>
+                <li>이메일: <a href="mailto:ggong37701@gmail.com">ggong37701@gmail.com</a></li>
+            </ul>
+        </div>
+
+        <!-- Achievements Section -->
+        <div class="section">
+            <h3>수상 내역</h3>
+            <ul>
+                <li><strong>2024</strong> - 고려대학교 세종캠퍼스 KUality 주최 KCTF_Jr 2024 5등</li>
+                <li><strong>2024</strong> - 고려대학교 세종캠퍼스 KUality 주최 KCTF 4등</li>
+            </ul>
+        </div>
+
+        <!-- Bug Bounty Section -->
+        <div class="section">
+            <h3>Bug Bounty 활동</h3>
+            <ul>
+                <li>에듀윅스 관리자 권한 획득 취약점 제보</li>
+                <li>클래스카드 교사권한 탈취 취약점 및 기타 3개 취약점 제보</li>
+                <li>리로스쿨 XSS 취약점 제보</li>
+                <li>에듀나비 계정 패스워드 무단 변조 취약점, 파라미터 값 검증 미흡으로 인한 SMS 발신자번호 무단수정 취약점 제보</li>
+                <li>라온위즈 K Upload LFI 취약점 및 취약한 서버 제보</li>
+                <li>WordPress Plugin 취약점 제보: CVE-2024-43261, CVE-2024-35767, CVE-2024-35746, CVE-2024-35745, CVE-2024-35744, CVE-2024-35743, CVE-2024-35650, CVE-2024-35634, CVE-2024-35629</li>
+            </ul>
         </div>
     </div>
 
-    <script>
-        const reports = [
-            { product: "에듀윅스", date: "2020년 12월", details: "유저권한에서 파라미터 변조를 통해 관리자 권한을 취득할 수 있는 취약점과, 파라미터 값을 조작해 휴대폰 인증과정을 건너뛸 수 있는 취약점" },
-            { product: "클래스카드", date: "2020년 9월", details: "변조된 패킷을 전송함을 통해 카드게임 점수 조작, 권한 무단 상승 등의 취약점" },
-            { product: "리로스쿨", date: "2021년 7월", details: "크로스 사이트 스크립팅 취약점" },
-            { product: "에듀나비", date: "2022년 7월", details: "무단으로 상대방 계정의 패스워드를 변경할 수 있는 취약점과 조작된 발신자번호로 SMS를 보낼 수 있는 취약점" },
-            { product: "라온K Upload", date: "2023년 5월", details: "LFI 취약점 및 Google Dork으로 찾은 취약한 서버들" },
-            { product: "Responsive FileManager", date: "2024년 6월", details: "Arbitrary File Upload 취약점" },
-            { product: "WordPress Compute Links Plugin", date: "2024년 8월", details: "LFI 취약점 (CVE-2024-43261)" },
-            { product: "WordPress Squeeze Plugin", date: "2024년 6월", details: "Arbitrary File Upload 취약점 (CVE-2024-35767)" },
-            { product: "WordPress BuddyPress Cover Plugin", date: "2024년 6월", details: "Arbitrary File Upload 취약점 (CVE-2024-35746)" },
-            { product: "WordPress Strategery Migrations Plugin", date: "2024년 6월", details: "Arbitrary File Download 취약점 (CVE-2024-35745)" },
-            { product: "WordPress Upunzipper Plugin", date: "2024년 6월", details: "Arbitrary File Deletion 취약점 (CVE-2024-35744)" },
-            { product: "WordPress SC filechecker Plugin", date: "2024년 6월", details: "Arbitrary File Deletion 취약점 (CVE-2024-35743)" },
-            { product: "WordPress MelaPress Login Security Plugin", date: "2024년 6월", details: "LFI 취약점 (CVE-2024-35650)" },
-            { product: "WordPress Woocommerce – Recent Purchases Plugin", date: "2024년 6월", details: "LFI 취약점 (CVE-2024-35634)" },
-            { product: "WordPress Easy Digital Downloads – Recent Purchases Plugin", date: "2024년 5월", details: "RFI 취약점 (CVE-2024-35629)" }
-        ];
-
-        const reportContainer = document.getElementById('reports');
-        reports.forEach(report => {
-            const reportItem = document.createElement('div');
-            reportItem.className = "bg-gray-50 p-4 rounded-lg shadow-md";
-            reportItem.innerHTML = `
-                <h3 class="text-xl font-semibold text-blue-500">${report.product}</h3>
-                <p class="text-sm text-gray-600">제보일: ${report.date}</p>
-                <p class="text-gray-800 mt-2">${report.details}</p>
-            `;
-            reportContainer.appendChild(reportItem);
-        });
-    </script>
+    <footer>
+        <p>&copy; 2024 YC_Infosec. All Rights Reserved.</p>
+    </footer>
 </body>
 </html>
+

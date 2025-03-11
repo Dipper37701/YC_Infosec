@@ -1,1 +1,54 @@
-<h1>Hello World</h1>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>정유찬 - 자기소개</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-900">
+    <div class="max-w-4xl mx-auto py-10">
+        <div class="bg-white p-8 rounded-2xl shadow-lg">
+            <h1 class="text-3xl font-bold text-center text-blue-600">정유찬</h1>
+            <p class="text-center text-gray-600 mt-2">고려대학교 세종캠퍼스 | 인공지능사이버보안학과 24학번</p>
+            
+            <div class="mt-6">
+                <h2 class="text-2xl font-semibold text-gray-800">취약점 제보 이력</h2>
+                <div id="reports" class="mt-4 space-y-4"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const reports = [
+            { product: "에듀윅스", date: "2020년 12월", details: "유저권한에서 파라미터 변조를 통해 관리자 권한을 취득할 수 있는 취약점과, 파라미터 값을 조작해 휴대폰 인증과정을 건너뛸 수 있는 취약점" },
+            { product: "클래스카드", date: "2020년 9월", details: "변조된 패킷을 전송함을 통해 카드게임 점수 조작, 권한 무단 상승 등의 취약점" },
+            { product: "리로스쿨", date: "2021년 7월", details: "크로스 사이트 스크립팅 취약점" },
+            { product: "에듀나비", date: "2022년 7월", details: "무단으로 상대방 계정의 패스워드를 변경할 수 있는 취약점과 조작된 발신자번호로 SMS를 보낼 수 있는 취약점" },
+            { product: "라온K Upload", date: "2023년 5월", details: "LFI 취약점 및 Google Dork으로 찾은 취약한 서버들" },
+            { product: "Responsive FileManager", date: "2024년 6월", details: "Arbitrary File Upload 취약점" },
+            { product: "WordPress Compute Links Plugin", date: "2024년 8월", details: "LFI 취약점 (CVE-2024-43261)" },
+            { product: "WordPress Squeeze Plugin", date: "2024년 6월", details: "Arbitrary File Upload 취약점 (CVE-2024-35767)" },
+            { product: "WordPress BuddyPress Cover Plugin", date: "2024년 6월", details: "Arbitrary File Upload 취약점 (CVE-2024-35746)" },
+            { product: "WordPress Strategery Migrations Plugin", date: "2024년 6월", details: "Arbitrary File Download 취약점 (CVE-2024-35745)" },
+            { product: "WordPress Upunzipper Plugin", date: "2024년 6월", details: "Arbitrary File Deletion 취약점 (CVE-2024-35744)" },
+            { product: "WordPress SC filechecker Plugin", date: "2024년 6월", details: "Arbitrary File Deletion 취약점 (CVE-2024-35743)" },
+            { product: "WordPress MelaPress Login Security Plugin", date: "2024년 6월", details: "LFI 취약점 (CVE-2024-35650)" },
+            { product: "WordPress Woocommerce – Recent Purchases Plugin", date: "2024년 6월", details: "LFI 취약점 (CVE-2024-35634)" },
+            { product: "WordPress Easy Digital Downloads – Recent Purchases Plugin", date: "2024년 5월", details: "RFI 취약점 (CVE-2024-35629)" }
+        ];
+
+        const reportContainer = document.getElementById('reports');
+        reports.forEach(report => {
+            const reportItem = document.createElement('div');
+            reportItem.className = "bg-gray-50 p-4 rounded-lg shadow-md";
+            reportItem.innerHTML = `
+                <h3 class="text-xl font-semibold text-blue-500">${report.product}</h3>
+                <p class="text-sm text-gray-600">제보일: ${report.date}</p>
+                <p class="text-gray-800 mt-2">${report.details}</p>
+            `;
+            reportContainer.appendChild(reportItem);
+        });
+    </script>
+</body>
+</html>

@@ -3,9 +3,9 @@
     {
       "kty": "RSA",
       "use": "sig",
-      "kid": "evil-key",
+      "kid": "server-key",
       "alg": "RS256",
-      "n": "kBy7RWaFU1pajF_v-JZQ080CFcQR7Tk2zDRweLv1Mzyg6XJMoqndZeDBfdeyl2Bny8Fvl91f57Vaj8ERgJEF8iDmPYunVSLQCXJKnMvfKRLwGqNWgStOyo8J1Fgqu3fKQ3Nw0L7ZgFlz3bUISw2s2u1bUvQvRA4eLYqBDtIjAAPESLCJBfYxW7sNCaGAXL_s9Xi46hujXj4zkxqx6NdnTRpstbGqXbDzn8dSMwbZLNk7moL0O2e-bk7mIvmHJpGz3rCLSrRvQBPyBN8WtATa0oeWTtW9k10FqAH2ChsUJHk2u0qx-mraaGz69vMuxP7U3Fcei_-aYuH5ETbIxkKNQw",
+      "n": "zMvDur7Sf6hxPpS5ZQQ1cg0gNIAuqL45Z8Oh7fGN5GnYJycgGzqF8jBxIOYL3J3Egjk0LUB9FUue_5DRO7QFfODVsxb3s4_00wvAIEuVW29eFqwOfuLEcIQkHg450E5C1VGy0i_laYOqte_DlLQrjDYVM3xX6Fp1dTH-jDlXVInUN9kEwPaCxlHOzIeFWhxxTuwWUTiyL-N1HKhr-O-92lwV7ZxbVN52nxh__vT6FOfgZdLbq6VzdWCGJN3L3OXi4Jx_EHWEjlgOXD2d3afOHc9rXbRIFcfPQUqGkso2hj312KxXldeGhMg7iS9yfxGl4DQUh3T_izz5a4N0RuykWw",
       "e": "AQAB"
     }
   ]
